@@ -1,12 +1,21 @@
 import os
-import time
 import random
 from datetime import datetime, timedelta
-import mysql.connector
-from mysql.connector import Error
-from typing import List, Dict
 
-# Konstanten für Status
+
+OUTPUT_FILE = "init/002_data.sql"
+
+NUM_SUPPLIERS = 100
+NUM_MATERIALS = 200
+NUM_EMPLOYEES = 90
+NUM_PURCHASE_ORDERS = 1000
+NUM_ORDER_ITEMS = 3000
+NUM_APPROVALS = 500
+NUM_GOODS_RECEIPTS = 500
+NUM_INVOICES = 500
+NUM_PAYMENTS = 500
+
+# Konstanten
 PO_STATUS = ['DRAFT', 'SUBMITTED', 'APPROVED', 'REJECTED', 'COMPLETED']
 APPROVAL_STATUS = ['PENDING', 'APPROVED', 'REJECTED']
 GR_STATUS = ['COMPLETE', 'PARTIAL', 'DAMAGED', 'REJECTED']
@@ -26,400 +35,244 @@ MATERIAL_PREFIXES = ["Standard", "Premium", "Basic", "Pro", "Industrial"]
 MATERIAL_TYPES = ["Schraube", "Mutter", "Blech", "Rohr", "Kabel", "Stecker", "Gehäuse", "Platine", "Motor", "Sensor"]
 CATEGORIES = ["Rohstoffe", "Büromaterial", "Elektronik", "Werkzeuge", "Verbrauchsmaterial"]
 UNITS = ["Stück", "Karton", "Palette", "Meter", "Kilogramm", "Liter"]
+CURRENCIES = ["EUR", "USD"]
 
-def get_database_connection():
-    return mysql.connector.connect(
-        host=os.getenv('MYSQL_HOST'),
-        database=os.getenv('MYSQL_DATABASE'),
-        user=os.getenv('MYSQL_USER'),
-        password=os.getenv('MYSQL_PASSWORD')
-    )
-
-def generate_random_date(start_year: int = 2022) -> datetime:
-    """Generiert ein zufälliges Datum zwischen start_year und heute"""
+def generate_random_date(start_year=2022):
     start = datetime(start_year, 1, 1)
     end = datetime.now()
-    days_between = (end - start).days
-    random_days = random.randint(0, days_between)
-    return start + timedelta(days=random_days)
-
-def generate_random_name() -> tuple:
-    """Generiert einen zufälligen Namen"""
-    first_name = random.choice(FIRST_NAMES)
-    last_name = random.choice(LAST_NAMES)
-    return first_name, last_name
-
-def generate_random_email(first_name: str, last_name: str) -> str:
-    """Generiert eine zufällige E-Mail-Adresse"""
-    domain = random.choice(DOMAINS)
-    return f"{first_name.lower()}.{last_name.lower()}@{domain}"
-
-def generate_random_company() -> str:
-    """Generiert einen zufälligen Firmennamen"""
-    return f"{random.choice(COMPANY_NAMES)} {random.choice(COMPANY_SUFFIXES)}"
-
-def generate_suppliers(conn, count: int) -> List[int]:
-    supplier_ids = []
-    cursor = conn.cursor()
-    insert_query = """
-    INSERT INTO supplier (name, contact_person, email, created_at)
-    VALUES (%s, %s, %s, %s)
-    """
+    random_date = start + timedelta(days=random.randint(0, (end - start).days))
     
-    for _ in range(count):
-        company = generate_random_company()
-        first_name, last_name = generate_random_name()
-        contact_person = f"{first_name} {last_name}"
-        email = generate_random_email(first_name, last_name)
-        created_at = generate_random_date()
-        
-        cursor.execute(insert_query, (company, contact_person, email, created_at))
-        supplier_ids.append(cursor.lastrowid)
+    random_time = timedelta(
+        hours=random.randint(0, 23),
+        minutes=random.randint(0, 59),
+        seconds=random.randint(0, 59)
+    )
     
-    conn.commit()
-    return supplier_ids
+    return (random_date + random_time).strftime("%Y-%m-%d %H:%M:%S")
 
-def generate_materials(conn, count: int) -> List[int]:
-    material_ids = []
-    cursor = conn.cursor()
-    insert_query = """
-    INSERT INTO material (name, description, unit, category, created_at)
-    VALUES (%s, %s, %s, %s, %s)
-    """
-    
-    for _ in range(count):
-        prefix = random.choice(MATERIAL_PREFIXES)
-        type_ = random.choice(MATERIAL_TYPES)
-        name = f"{prefix} {type_}"
-        description = f"Standardausführung {type_}"
-        unit = random.choice(UNITS)
+
+def random_price(min_val=5, max_val=1000):
+    return round(random.uniform(min_val, max_val), 2)
+
+
+def write_sql_file():
+    os.makedirs("init", exist_ok=True) 
+
+    suppliers_data = []
+    materials_data = []
+    employees_data = []
+    employees_by_role = {'purchaser': [], 'approver': [], 'receiver': []}
+    purchase_orders_data = []
+    order_items_data = []
+    approval_data = []
+    goods_receipts_data = []
+    invoice_data = []
+    payment_data = []
+
+    random.shuffle(COMPANY_NAMES) 
+    random.shuffle(COMPANY_SUFFIXES)  
+    random.shuffle(DOMAINS) 
+
+    # 1) Generate Suppliers
+    for i in range(1, NUM_SUPPLIERS + 1):
+
+         company = f"{COMPANY_NAMES[i % len(COMPANY_NAMES)]} {COMPANY_SUFFIXES[i % len(COMPANY_SUFFIXES)]}"
+         first_name = FIRST_NAMES[i % len(FIRST_NAMES)]
+         last_name = LAST_NAMES[i % len(LAST_NAMES)]
+         email = f"{first_name.lower()}.{last_name.lower()}@{DOMAINS[i % len(DOMAINS)]}"
+         created_at = generate_random_date()
+         suppliers_data.append((i, company, f"{first_name} {last_name}", email, created_at))
+
+
+    # 2) Generate Materials
+
+    for i in range(1, NUM_MATERIALS + 1):
+        prefix = random.choice(MATERIAL_PREFIXES)  
+        mat_type = random.choice(MATERIAL_TYPES) 
+        name = f"{prefix} {mat_type}"
+        description = f"Description for {name}"
         category = random.choice(CATEGORIES)
+        unit = random.choice(UNITS)
+        currency = random.choice(CURRENCIES)
         created_at = generate_random_date()
-        
-        cursor.execute(insert_query, (name, description, unit, category, created_at))
-        material_ids.append(cursor.lastrowid)
-    
-    conn.commit()
-    return material_ids
+        materials_data.append((i, name, description, unit, category, created_at))
 
-def generate_employees(conn, count: int) -> Dict[str, List[int]]:
-    employee_ids = {'purchaser': [], 'approver': [], 'receiver': []}
+    # 3) Generate Employees
     
-    departments = {
-        'purchaser': 'Einkauf',
-        'approver': 'Management',
-        'receiver': 'Logistik'
-    }
-    
-    cursor = conn.cursor()
-    insert_query = """
-    INSERT INTO employee (name, department, role, created_at)
-    VALUES (%s, %s, %s, %s)
-    """
-    
-    for role, dept in departments.items():
-        for _ in range(count // 3):
-            first_name, last_name = generate_random_name()
-            name = f"{first_name} {last_name}"
-            created_at = generate_random_date()
-            
-            cursor.execute(insert_query, (name, dept, role, created_at))
-            employee_ids[role].append(cursor.lastrowid)
-    
-    conn.commit()
-    return employee_ids
+    employees_by_role = {'purchaser': [], 'approver': [], 'receiver': [], 'accountant': [], 'operations_manager': []}
 
-def generate_purchase_orders(conn, params: Dict) -> List[Dict]:
-    orders = []
-    start_date = datetime(2022, 1, 1)
-    end_date = datetime.now()
-    total_days = (end_date - start_date).days
-    
-    orders_per_day = 50000 / 365
-    target_count = int((total_days * orders_per_day) + 0.5)
-    
-    cursor = conn.cursor()
-    insert_query = """
-    INSERT INTO purchase_order (supplier_id, employee_id, total_amount, currency, status, created_at)
-    VALUES (%s, %s, %s, %s, %s, %s)
-    """
-    
-    for _ in range(target_count):
-        supplier_id = random.choice(params['supplier_ids'])
-        employee_id = random.choice(params['employee_ids']['purchaser'])
+    for i in range(1, NUM_EMPLOYEES + 1):
+        first_name = random.choice(FIRST_NAMES)
+        last_name = random.choice(LAST_NAMES)
+        department = random.choice(DEPARTMENTS)
+        if department == "Einkauf":
+            role = "purchaser"
+        elif department == "Management":
+            role = "approver"
+        elif department == "Logistik":
+            role = "receiver"
+        elif department == "Finanzen":
+             role = "accountant"  
+        else:
+             role = "operations_manager"  
         created_at = generate_random_date()
-        
-        order = {
-            'supplier_id': supplier_id,
-            'employee_id': employee_id,
-            'created_at': created_at,
-            'currency': 'EUR',
-            'status': random.choice(['COMPLETED'] * 8 + ['REJECTED'] * 1 + ['IN_PROGRESS'] * 1),
-            'items': random.randint(1, 5)
-        }
-        
-        cursor.execute(insert_query, (
-            order['supplier_id'],
-            order['employee_id'],
-            0,
-            order['currency'],
-            order['status'],
-            order['created_at']
-        ))
-        
-        order['id'] = cursor.lastrowid
-        orders.append(order)
-    
-    conn.commit()
-    return orders
+        employees_data.append((i, f"{first_name} {last_name}", department, role, created_at))
+        employees_by_role[role].append(i)
 
-def generate_order_items(conn, orders: List[Dict], material_ids: List[int]) -> Dict[int, List[Dict]]:
-    items_by_order = {}
-    
-    cursor = conn.cursor()
-    insert_query = """
-    INSERT INTO order_item (po_id, material_id, quantity, price_per_unit)
-    VALUES (%s, %s, %s, %s)
-    """
-    
-    for order in orders:
-        items = []
-        total_amount = 0
-        
-        for _ in range(order['items']):
-            material_id = random.choice(material_ids)
-            quantity = random.randint(1, 100)
-            price = round(random.uniform(10, 1000), 2)
-            
-            cursor.execute(insert_query, (
-                order['id'],
-                material_id,
-                quantity,
-                price
-            ))
-            
-            item = {
-                'id': cursor.lastrowid,
-                'material_id': material_id,
-                'quantity': quantity,
-                'price': price
-            }
-            items.append(item)
-            total_amount += quantity * price
-        
-        cursor.execute(
-            "UPDATE purchase_order SET total_amount = %s WHERE po_id = %s",
-            (total_amount, order['id'])
-        )
-        
-        items_by_order[order['id']] = items
-    
-    conn.commit()
-    return items_by_order
+    # 4) Generate Purchase Orders
 
-def generate_approvals(conn, orders: List[Dict], approver_ids: List[int]):
-    cursor = conn.cursor()
-    insert_query = """
-    INSERT INTO approval_process (po_id, approver_id, approval_level, decision, comment, created_at)
-    VALUES (%s, %s, %s, %s, %s, %s)
-    """
-    
-    for order in orders:
-        if order['status'] != 'DRAFT':
-            levels = random.randint(1, 2)
-            
-            for level in range(1, levels + 1):
-                approver_id = random.choice(approver_ids)
-                decision = 'APPROVED' if order['status'] == 'COMPLETED' else 'REJECTED'
-                comment = "Genehmigt" if decision == 'APPROVED' else "Abgelehnt aufgrund von Budgetüberschreitung"
-                created_at = order['created_at'] + timedelta(hours=random.randint(1, 48))
-                
-                cursor.execute(insert_query, (
-                    order['id'],
-                    approver_id,
-                    level,
-                    decision,
-                    comment,
-                    created_at
-                ))
-    
-    conn.commit()
+    for i in range(1, NUM_PURCHASE_ORDERS + 1):
+        supplier_id = random.randint(1, NUM_SUPPLIERS)
+        if employees_by_role['purchaser']:
+            employee_id = random.choice(employees_by_role['purchaser'])
+        else:
+            employee_id = random.randint(1, NUM_EMPLOYEES)
+        created_at = generate_random_date()
+        status = random.choice(PO_STATUS)
+        
+        # Calculate total amount for each purchase order
+        total_amount = sum(item[3] * item[4] for item in order_items_data if item[1] == i)
+        currency = random.choice(CURRENCIES)
+        purchase_orders_data.append((i, supplier_id, employee_id, total_amount, currency, status, created_at))
 
-def generate_goods_receipts(conn, orders: List[Dict], items_by_order: Dict, receiver_ids: List[int]):
-    cursor = conn.cursor()
-    insert_query = """
-    INSERT INTO goods_receipt (po_id, order_item_id, receiver_id, delivery_note_number,
-                             quantity_received, receipt_date, status, quality_status,
-                             batch_number, comment, created_at)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-    """
-    
-    for order in orders:
-        if order['status'] == 'COMPLETED':
-            items = items_by_order[order['id']]
-            receipt_date = order['created_at'] + timedelta(days=random.randint(2, 14))
-            
-            for item in items:
-                deliveries = random.choices([1, 2], weights=[80, 20])[0]
-                remaining_quantity = item['quantity']
-                
-                for delivery in range(deliveries):
-                    if deliveries == 1:
-                        quantity = remaining_quantity
-                        status = 'COMPLETE'
-                    else:
-                        if delivery == 0:
-                            quantity = int(remaining_quantity * random.uniform(0.4, 0.6))
-                            status = 'PARTIAL'
-                        else:
-                            quantity = remaining_quantity
-                            status = 'COMPLETE'
-                            receipt_date += timedelta(days=random.randint(1, 7))
-                    
-                    remaining_quantity -= quantity
-                    
-                    quality_status = random.choices(
-                        GR_QUALITY_STATUS,
-                        weights=[92, 5, 3]
-                    )[0]
-                    
-                    cursor.execute(insert_query, (
-                        order['id'],
-                        item['id'],
-                        random.choice(receiver_ids),
-                        f"DN-{random.randint(10000000, 99999999)}",
-                        quantity,
-                        receipt_date,
-                        status,
-                        quality_status,
-                        f"BATCH-{random.randint(100000, 999999)}",
-                        "Wareneingangskontrolle bestanden" if quality_status == 'GOOD' else "Qualitätsmängel festgestellt",
-                        receipt_date
-                    ))
-    
-    conn.commit()
+    # 5) Generate Order Items
 
-def generate_invoices_and_payments(conn, orders: List[Dict], items_by_order: Dict):
-    cursor = conn.cursor()
-    invoice_query = """
-    INSERT INTO invoice (po_id, order_item_id, invoice_number, invoice_date,
-                        due_date, quantity, price_per_unit, tax_rate, currency,
-                        status, payment_terms, created_at)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-    """
-    
-    payment_query = """
-    INSERT INTO payment (invoice_id, payment_date, amount, payment_method,
-                        reference_number, status, created_at)
-    VALUES (%s, %s, %s, %s, %s, %s, %s)
-    """
-    
-    for order in orders:
-        if order['status'] == 'COMPLETED':
-            items = items_by_order[order['id']]
-            invoice_date = order['created_at'] + timedelta(days=random.randint(5, 20))
-            due_date = invoice_date + timedelta(days=30)
-            
-            for item in items:
-                cursor.execute(invoice_query, (
-                    order['id'],
-                    item['id'],
-                    f"INV-{random.randint(10000000, 99999999)}",
-                    invoice_date,
-                    due_date,
-                    item['quantity'],
-                    item['price'],
-                    19.0,
-                    'EUR',
-                    'PAID',
-                    'Net 30',
-                    invoice_date
-                ))
-                
-                invoice_id = cursor.lastrowid
-                payment_date = due_date - timedelta(days=random.randint(0, 5))
-                amount = item['quantity'] * item['price'] * 1.19
-                
-                cursor.execute(payment_query, (
-                    invoice_id,
-                    payment_date,
-                    amount,
-                    random.choice(PAYMENT_METHODS),
-                    f"PAY-{random.randint(1000000000, 9999999999)}",
-                    'PROCESSED',
-                    payment_date
-                ))
-    
-    conn.commit()
+    for i in range(1, NUM_ORDER_ITEMS + 1):
+        po_id = random.randint(1, NUM_PURCHASE_ORDERS)
+        mat_id = random.randint(1, NUM_MATERIALS)
+        quantity = random.randint(1, 100)
+        price_per_unit = random_price(10, 1000)
+        order_items_data.append((i, po_id, mat_id, quantity, price_per_unit))
 
-def main():
-    print("Starting data generator...")
-    start_time = time.time()
-    
-    try:
-        conn = get_database_connection()
-        
-        print("Generating master data...")
-        print("- Suppliers...")
-        supplier_ids = generate_suppliers(conn, 100)  # 100 Lieferanten
-        
-        print("- Materials...")
-        material_ids = generate_materials(conn, 500)  # 500 Materialien
-        
-        print("- Employees...")
-        employee_ids = generate_employees(conn, 90)   # 30 je Rolle
-        
-        print("\nGenerating purchase orders...")
-        orders = generate_purchase_orders(conn, {
-            'supplier_ids': supplier_ids,
-            'employee_ids': employee_ids
-        })
-        print(f"Generated {len(orders)} purchase orders")
-        
-        print("\nGenerating order items...")
-        items_by_order = generate_order_items(conn, orders, material_ids)
-        total_items = sum(len(items) for items in items_by_order.values())
-        print(f"Generated {total_items} order items")
-        
-        print("\nGenerating approval processes...")
-        generate_approvals(conn, orders, employee_ids['approver'])
-        
-        print("\nGenerating goods receipts...")
-        generate_goods_receipts(conn, orders, items_by_order, employee_ids['receiver'])
-        
-        print("\nGenerating invoices and payments...")
-        generate_invoices_and_payments(conn, orders, items_by_order)
-        
-        duration = time.time() - start_time
-        print(f"\nData generation completed in {duration:.2f} seconds!")
-        
-        # Statistiken ausgeben
-        cursor = conn.cursor()
-        
-        cursor.execute("SELECT COUNT(*) FROM purchase_order")
-        po_count = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM order_item")
-        item_count = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM goods_receipt")
-        gr_count = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM invoice")
-        inv_count = cursor.fetchone()[0]
-        
-        print("\nGenerated Records:")
-        print(f"Purchase Orders: {po_count}")
-        print(f"Order Items: {item_count}")
-        print(f"Goods Receipts: {gr_count}")
-        print(f"Invoices: {inv_count}")
-        
-    except Error as e:
-        print(f"Error: {e}")
-    finally:
-        if conn.is_connected():
-            conn.close()
-            print("\nDatabase connection closed.")
+    # 6) Generate Approval Process
+
+    for i in range(1, NUM_APPROVALS + 1):
+        po_id = random.randint(1, NUM_PURCHASE_ORDERS)
+        if employees_by_role['approver']:
+            approver_id = random.choice(employees_by_role['approver'])
+        else:
+            approver_id = random.randint(1, NUM_EMPLOYEES)
+        approval_level = random.randint(1, 3)
+        decision = random.choice(APPROVAL_STATUS)
+        comment = "Genehmigt" if decision == 'APPROVED' else "Abgelehnt aufgrund von Budgetüberschreitung"
+        created_at = generate_random_date()
+        approval_data.append((i, po_id, approver_id, approval_level, decision, comment, created_at))
+
+    # 7) Generate Goods Receipts
+
+    for i in range(1, NUM_GOODS_RECEIPTS + 1):
+        po_id = random.randint(1, NUM_PURCHASE_ORDERS)
+        order_item_id = random.randint(1, NUM_ORDER_ITEMS)
+        if employees_by_role['receiver']:
+            receiver_id = random.choice(employees_by_role['receiver'])
+        else:
+            receiver_id = random.randint(1, NUM_EMPLOYEES)
+        delivery_note = f"DN-{random.randint(1000000,9999999)}"
+        quantity_received = random.randint(1, 100)
+        receipt_date = generate_random_date()
+        status = random.choice(GR_STATUS)
+        quality = random.choice(GR_QUALITY_STATUS)
+        batch_number = f"BATCH-{random.randint(100000,999999)}"
+        comment = "All good" if quality == "GOOD" else "Issue found"
+        created_at = receipt_date
+        goods_receipts_data.append((i, po_id, order_item_id, receiver_id, delivery_note,
+                                    quantity_received, receipt_date, status, quality,
+                                    batch_number, comment, created_at))
+
+    # 8) Generate Invoices
+
+    for i in range(1, NUM_INVOICES + 1):
+        po_id = random.randint(1, NUM_PURCHASE_ORDERS)
+        order_item_id = random.randint(1, NUM_ORDER_ITEMS)
+        invoice_number = f"INV-{random.randint(1000000,9999999)}"
+        invoice_date = generate_random_date()
+        due_date = generate_random_date(start_year=2023)
+        quantity = random.randint(1, 50)
+        price_per_unit = random_price(10, 800)
+        tax_rate = 19.0
+        currency = random.choice(CURRENCIES)
+        status = random.choice(INVOICE_STATUS)
+        payment_terms = "Net 30"
+        created_at = invoice_date
+        invoice_data.append((i, po_id, order_item_id, invoice_number, invoice_date, due_date,
+                             quantity, price_per_unit, tax_rate, currency, status,
+                             payment_terms, created_at))
+
+    # 9) Generate Payments
+
+    for i in range(1, NUM_PAYMENTS + 1):
+        invoice_id = random.randint(1, NUM_INVOICES)
+        payment_date = generate_random_date(start_year=2023)
+        amount = random_price(50, 5000)
+        payment_method = random.choice(PAYMENT_METHODS)
+        reference_number = f"PAY-{random.randint(100000000,999999999)}"
+        status = random.choice(PAYMENT_STATUS)
+        created_at = payment_date 
+        payment_data.append((i, invoice_id, payment_date, amount, payment_method,
+                             reference_number, status, created_at))
+
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+
+        # SUPPLIER
+        f.write("INSERT INTO supplier (supplier_id, name, contact_person, email, created_at) VALUES\n")
+        f.write(",\n".join([
+            f"({s[0]}, '{s[1]}', '{s[2]}', '{s[3]}', '{s[4]}')" for s in suppliers_data
+        ]) + ";\n\n")
+
+        # MATERIAL
+        f.write("INSERT INTO material (material_id, name, description, unit, category, created_at) VALUES\n")
+        f.write(",\n".join([
+            f"({m[0]}, '{m[1]}', '{m[2]}', '{m[3]}', '{m[4]}', '{m[5]}')" for m in materials_data
+        ]) + ";\n\n")
+
+        # EMPLOYEE
+        f.write("INSERT INTO employee (employee_id, name, department, role, created_at) VALUES\n")
+        f.write(",\n".join([
+            f"({e[0]}, '{e[1]}', '{e[2]}', '{e[3]}', '{e[4]}')" for e in employees_data
+        ]) + ";\n\n")
+
+        # PURCHASE ORDER
+        f.write("INSERT INTO purchase_order (po_id, supplier_id, employee_id, total_amount, currency, status, created_at) VALUES\n")
+        f.write(",\n".join([
+            f"({p[0]}, {p[1]}, {p[2]}, {p[3]}, '{p[4]}', '{p[5]}', '{p[6]}')" for p in purchase_orders_data
+        ]) + ";\n\n")
+
+        # ORDER ITEM
+        f.write("INSERT INTO order_item (order_item_id, po_id, material_id, quantity, price_per_unit) VALUES\n")
+        f.write(",\n".join([
+            f"({o[0]}, {o[1]}, {o[2]}, {o[3]}, {o[4]})" for o in order_items_data
+        ]) + ";\n\n")
+
+        # APPROVAL PROCESS
+        f.write("INSERT INTO approval_process (approval_id, po_id, approver_id, approval_level, decision, comment, created_at) VALUES\n")
+        f.write(",\n".join([
+            f"({a[0]}, {a[1]}, {a[2]}, {a[3]}, '{a[4]}', '{a[5]}', '{a[6]}')" for a in approval_data
+        ]) + ";\n\n")
+
+        # GOODS RECEIPT
+        f.write("INSERT INTO goods_receipt (receipt_id, po_id, order_item_id, receiver_id, delivery_note_number, "
+                "quantity_received, receipt_date, status, quality_status, batch_number, comment, created_at) VALUES\n")
+        f.write(",\n".join([
+            f"({g[0]}, {g[1]}, {g[2]}, {g[3]}, '{g[4]}', {g[5]}, '{g[6]}', '{g[7]}', '{g[8]}', '{g[9]}', '{g[10]}', '{g[11]}')" 
+            for g in goods_receipts_data
+        ]) + ";\n\n")
+
+        # INVOICE
+        f.write("INSERT INTO invoice (invoice_id, po_id, order_item_id, invoice_number, invoice_date, due_date, "
+                "quantity, price_per_unit, tax_rate, currency, status, payment_terms, created_at) VALUES\n")
+        f.write(",\n".join([
+            f"({v[0]}, {v[1]}, {v[2]}, '{v[3]}', '{v[4]}', '{v[5]}', {v[6]}, {v[7]}, {v[8]}, '{v[9]}', '{v[10]}', '{v[11]}', '{v[12]}')" 
+            for v in invoice_data
+        ]) + ";\n\n")
+
+        # PAYMENT
+        f.write("INSERT INTO payment (payment_id, invoice_id, payment_date, amount, payment_method, reference_number, "
+                "status, created_at) VALUES\n")
+        f.write(",\n".join([
+            f"({p[0]}, {p[1]}, '{p[2]}', {p[3]}, '{p[4]}', '{p[5]}', '{p[6]}', '{p[7]}')" 
+            for p in payment_data
+        ]) + ";\n\n")
+
 
 if __name__ == "__main__":
-    main()
+    write_sql_file()

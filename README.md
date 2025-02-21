@@ -1,5 +1,3 @@
-# process-mining-example
-
 # MySQL Docker Setup
 
 This repository contains a **MySQL 8.0** database setup using **Docker Compose**. The configuration ensures a persistent database with automatic initialization.
@@ -73,7 +71,7 @@ This will **stop and remove** the container but keep the data stored in the volu
 
 To remove the **data as well**:
 ```sh
-docker volume rm process-mining-example_mysql_data
+docker-compose down -v
 ```
 
 ## 📂 Directory Structure

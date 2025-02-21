@@ -125,3 +125,27 @@ CREATE TABLE payment (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (invoice_id) REFERENCES invoice(invoice_id)
 );
+
+CREATE TABLE cdpos (
+    change_id INT PRIMARY KEY AUTO_INCREMENT, 
+    po_item_id INT, 
+    changed_field VARCHAR(100),  
+    old_value VARCHAR(255),  
+    new_value VARCHAR(255), 
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
+    employee_id INT,  
+    FOREIGN KEY (po_item_id) REFERENCES order_item(order_item_id), 
+    FOREIGN KEY (employee_id) REFERENCES employee(employee_id)  
+);
+
+CREATE TABLE cdhdr (
+    change_id INT PRIMARY KEY AUTO_INCREMENT,  
+    po_id INT,  
+    changed_field VARCHAR(100),  
+    old_value VARCHAR(255),
+    new_value VARCHAR(255), 
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+    employee_id INT,  
+    FOREIGN KEY (po_id) REFERENCES purchase_order(po_id),
+    FOREIGN KEY (employee_id) REFERENCES employee(employee_id)  
+);

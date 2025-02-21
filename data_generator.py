@@ -36,6 +36,9 @@ MATERIAL_TYPES = ["Schraube", "Mutter", "Blech", "Rohr", "Kabel", "Stecker", "Ge
 CATEGORIES = ["Rohstoffe", "Büromaterial", "Elektronik", "Werkzeuge", "Verbrauchsmaterial"]
 UNITS = ["Stück", "Karton", "Palette", "Meter", "Kilogramm", "Liter"]
 CURRENCIES = ["EUR", "USD"]
+CDPOS_FIELDS = ['Material', 'Menge', 'Preis']
+CDHDR_FIELDS = ['Währung', 'Lieferant']
+
 
 def generate_random_date(start_year=2022):
     start = datetime(start_year, 1, 1)
@@ -54,6 +57,52 @@ def generate_random_date(start_year=2022):
 def random_price(min_val=5, max_val=1000):
     return round(random.uniform(min_val, max_val), 2)
 
+def generate_change_data(order_items, purchase_orders):
+    cdpos_data = []
+    cdhdr_data = []
+
+    # Generate change for order items
+    for order_item in order_items:
+        po_item_id, po_id, material_id, quantity, price_per_unit = (
+            order_item[0], order_item[1], order_item[2], order_item[3], order_item[4]
+        )
+        employee_id = random.randint(1, NUM_EMPLOYEES)
+        timestamp = generate_random_date()
+
+        for _ in range(random.randint(1, 3)):
+            changed_field = random.choice(CDPOS_FIELDS)
+            if changed_field == "Material":
+                old_value = material_id
+                new_value = random.randint(1, NUM_MATERIALS)
+            elif changed_field == "Menge":
+                old_value = quantity
+                new_value = max(1, int(quantity * random.uniform(0.8, 1.2)))
+            else:  
+                old_value = price_per_unit
+                new_value = random_price(10, 1000)
+
+            # Append the change to cdpos_data
+            cdpos_data.append((po_item_id, changed_field, old_value, new_value, timestamp, employee_id))
+
+    # Generate change for purchase orders
+    for purchase_order in purchase_orders:
+        po_id, supplier_id, currency = purchase_order[0], purchase_order[1], purchase_order[4]
+        employee_id = random.randint(1, NUM_EMPLOYEES)
+        timestamp = generate_random_date()
+
+        for _ in range(random.randint(1, 2)):
+            changed_field = random.choice(CDHDR_FIELDS)
+            if changed_field == "Währung":
+                old_value = currency
+                new_value = "USD" if currency == "EUR" else "EUR"
+            else:  
+                old_value = supplier_id
+                new_value = random.randint(1, NUM_SUPPLIERS)
+
+            # Append the change to cdhdr_data
+            cdhdr_data.append((po_id, changed_field, old_value, new_value, timestamp, employee_id))
+
+    return cdpos_data, cdhdr_data
 
 def write_sql_file():
     os.makedirs("init", exist_ok=True) 
@@ -143,6 +192,8 @@ def write_sql_file():
         quantity = random.randint(1, 100)
         price_per_unit = random_price(10, 1000)
         order_items_data.append((i, po_id, mat_id, quantity, price_per_unit))
+    
+    cdpos_data, cdhdr_data = generate_change_data(order_items_data, purchase_orders_data)
 
     # 6) Generate Approval Process
 
@@ -273,6 +324,17 @@ def write_sql_file():
             for p in payment_data
         ]) + ";\n\n")
 
+        # Insert into CDPOS
+        f.write("INSERT INTO cdpos (po_item_id, changed_field, old_value, new_value, timestamp, employee_id) VALUES\n")
+        f.write(",\n".join([
+            f"({c[0]}, '{c[1]}', '{c[2]}', '{c[3]}', '{c[4]}', {c[5]})" for c in cdpos_data
+        ]) + ";\n\n")
+
+        # Insert into CDHDR
+        f.write("INSERT INTO cdhdr (po_id, changed_field, old_value, new_value, timestamp, employee_id) VALUES\n")
+        f.write(",\n".join([
+            f"({c[0]}, '{c[1]}', '{c[2]}', '{c[3]}', '{c[4]}', {c[5]})" for c in cdhdr_data
+        ]) + ";\n\n")
 
 if __name__ == "__main__":
     write_sql_file()

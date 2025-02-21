@@ -82,15 +82,6 @@ process-mining-example/
 │── README.md            # This documentation
 ```
 
-## 📌 Environment Variables
-These values are set in `docker-compose.yml`:
-| Variable              | Value          |
-|----------------------|---------------|
-| MYSQL_ROOT_PASSWORD  | rootpassword  |
-| MYSQL_DATABASE       | demo-erp-system |
-| MYSQL_USER          | user          |
-| MYSQL_PASSWORD      | userpassword  |
-
 ## 🖥 Connecting via GUI (MySQL Workbench / DBeaver)
 If you prefer using a GUI tool, use these credentials:
 - **Host:** `127.0.0.1`

@@ -36,116 +36,141 @@
         <h1>ER-Diagramm: Einkaufsprozess</h1>
         <div id="mermaid-diagram" class="mermaid">
             erDiagram
-                supplier ||--o{ purchase_order : has
-                material ||--o{ order_item : contains
-                employee ||--o{ purchase_order : creates
-                employee ||--o{ approval_process : approves
-                employee ||--o{ goods_receipt : receives
-
-                purchase_order ||--o{ order_item : contains
-                purchase_order ||--o{ approval_process : requires
-                purchase_order ||--o{ goods_receipt : "received via"
-                purchase_order ||--o{ invoice : "billed via"
-
-                order_item ||--o{ goods_receipt : "received as"
-                order_item ||--o{ invoice : "billed as"
-
-                invoice ||--o{ payment : has
-
-                supplier {
-                    int supplier_id PK
-                    string name
-                    string contact_person
-                    string email
-                    timestamp created_at
-                }
-
-                material {
-                    int material_id PK
-                    string name
-                    string description
-                    string unit
-                    string category
-                    timestamp created_at
-                }
-
-                employee {
-                    int employee_id PK
-                    string name
-                    string department
-                    string role
-                    timestamp created_at
-                }
-
-                purchase_order {
-                    int po_id PK
-                    int supplier_id FK
-                    int employee_id FK
-                    decimal total_amount
-                    string currency
-                    enum status
-                    timestamp created_at
-                }
-
-                order_item {
-                    int order_item_id PK
-                    int po_id FK
-                    int material_id FK
-                    int quantity
-                    decimal price_per_unit
-                }
-
-                approval_process {
-                    int approval_id PK
-                    int po_id FK
-                    int approver_id FK
-                    int approval_level
-                    enum decision
-                    string comment
-                    timestamp created_at
-                }
-
-                goods_receipt {
-                    int receipt_id PK
-                    int po_id FK
-                    int order_item_id FK
-                    int receiver_id FK
-                    string delivery_note_number
-                    int quantity_received
-                    timestamp receipt_date
-                    enum status
-                    enum quality_status
-                    string batch_number
-                    string comment
-                    timestamp created_at
-                }
-
-                invoice {
-                    int invoice_id PK
-                    int po_id FK
-                    int order_item_id FK
-                    string invoice_number
-                    date invoice_date
-                    date due_date
-                    int quantity
-                    decimal price_per_unit
-                    decimal tax_rate
-                    string currency
-                    enum status
-                    string payment_terms
-                    timestamp created_at
-                }
-
-                payment {
-                    int payment_id PK
-                    int invoice_id FK
-                    date payment_date
-                    decimal amount
-                    enum payment_method
-                    string reference_number
-                    enum status
-                    timestamp created_at
-                }
+            supplier ||--o{ purchase_order : has
+            material ||--o{ order_item : contains
+            employee ||--o{ purchase_order : creates
+            employee ||--o{ approval_process : approves
+            employee ||--o{ goods_receipt : receives
+            employee ||--o{ cdpos : changes
+            employee ||--o{ cdhdr : changes
+        
+            purchase_order ||--o{ order_item : contains
+            purchase_order ||--o{ approval_process : requires
+            purchase_order ||--o{ goods_receipt : "received via"
+            purchase_order ||--o{ invoice : "billed via"
+            purchase_order ||--o{ cdhdr : "tracked in"
+        
+            order_item ||--o{ goods_receipt : "received as"
+            order_item ||--o{ invoice : "billed as"
+            order_item ||--o{ cdpos : "tracked in"
+        
+            invoice ||--o{ payment : has
+        
+            supplier {
+                int supplier_id PK
+                string name
+                string contact_person
+                string email
+                timestamp created_at
+            }
+        
+            material {
+                int material_id PK
+                string name
+                string description
+                string unit
+                string category
+                timestamp created_at
+            }
+        
+            employee {
+                int employee_id PK
+                string name
+                string department
+                string role
+                timestamp created_at
+            }
+        
+            purchase_order {
+                int po_id PK
+                int supplier_id FK
+                int employee_id FK
+                decimal total_amount
+                string currency
+                enum status
+                timestamp created_at
+            }
+        
+            order_item {
+                int po_id PK
+                int item_number PK
+                int material_id FK
+                int quantity
+                decimal price_per_unit
+            }
+        
+            approval_process {
+                int approval_id PK
+                int po_id FK
+                int approver_id FK
+                int approval_level
+                enum decision
+                string comment
+                timestamp created_at
+            }
+        
+            goods_receipt {
+                int receipt_id PK
+                int po_id FK
+                int po_item_number FK
+                int receiver_id FK
+                string delivery_note_number
+                int quantity_received
+                timestamp receipt_date
+                enum status
+                enum quality_status
+                string batch_number
+                string comment
+                timestamp created_at
+            }
+        
+            invoice {
+                int invoice_id PK
+                int po_id FK
+                int po_item_number FK
+                string invoice_number
+                date invoice_date
+                date due_date
+                int quantity
+                decimal price_per_unit
+                decimal tax_rate
+                string currency
+                enum status
+                string payment_terms
+                timestamp created_at
+            }
+        
+            payment {
+                int payment_id PK
+                int invoice_id FK
+                date payment_date
+                decimal amount
+                enum payment_method
+                string reference_number
+                enum status
+                timestamp created_at
+            }
+        
+            cdpos {
+                int change_id PK
+                int po_id FK
+                int po_item_number FK
+                string changed_field
+                string old_value
+                string new_value
+                timestamp timestamp
+                int employee_id FK
+            }
+        
+            cdhdr {
+                int change_id PK
+                int po_id FK
+                string changed_field
+                string old_value
+                string new_value
+                timestamp timestamp
+                int employee_id FK
+            }
         </div>
     </div>
 

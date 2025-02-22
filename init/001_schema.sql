@@ -47,13 +47,14 @@ CREATE TABLE purchase_order (
     FOREIGN KEY (employee_id) REFERENCES employee(employee_id)
 );
 
--- Bestellpositionen
+-- Bestellpositionen with composite key
 CREATE TABLE order_item (
-    order_item_id INT PRIMARY KEY AUTO_INCREMENT,
     po_id INT,
+    item_number INT,
     material_id INT,
     quantity INT,
     price_per_unit DECIMAL(10,2),
+    PRIMARY KEY (po_id, item_number),
     FOREIGN KEY (po_id) REFERENCES purchase_order(po_id),
     FOREIGN KEY (material_id) REFERENCES material(material_id)
 );
@@ -79,7 +80,7 @@ CREATE TABLE approval_process (
 CREATE TABLE goods_receipt (
     receipt_id INT PRIMARY KEY AUTO_INCREMENT,
     po_id INT,
-    order_item_id INT,
+    po_item_number INT,
     receiver_id INT,
     delivery_note_number VARCHAR(50),
     quantity_received INT,
@@ -89,8 +90,7 @@ CREATE TABLE goods_receipt (
     batch_number VARCHAR(50),
     comment TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (po_id) REFERENCES purchase_order(po_id),
-    FOREIGN KEY (order_item_id) REFERENCES order_item(order_item_id),
+    FOREIGN KEY (po_id, po_item_number) REFERENCES order_item(po_id, item_number),
     FOREIGN KEY (receiver_id) REFERENCES employee(employee_id)
 );
 
@@ -98,7 +98,7 @@ CREATE TABLE goods_receipt (
 CREATE TABLE invoice (
     invoice_id INT PRIMARY KEY AUTO_INCREMENT,
     po_id INT,
-    order_item_id INT,
+    po_item_number INT,
     invoice_number VARCHAR(50),
     invoice_date DATE,
     due_date DATE,
@@ -109,8 +109,7 @@ CREATE TABLE invoice (
     status ENUM('RECEIVED', 'IN_REVIEW', 'APPROVED', 'PAID', 'DISPUTED'),
     payment_terms VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (po_id) REFERENCES purchase_order(po_id),
-    FOREIGN KEY (order_item_id) REFERENCES order_item(order_item_id)
+    FOREIGN KEY (po_id, po_item_number) REFERENCES order_item(po_id, item_number)
 );
 
 -- Zahlungen
@@ -126,26 +125,29 @@ CREATE TABLE payment (
     FOREIGN KEY (invoice_id) REFERENCES invoice(invoice_id)
 );
 
+-- Change Document Position
 CREATE TABLE cdpos (
-    change_id INT PRIMARY KEY AUTO_INCREMENT, 
-    po_item_id INT, 
-    changed_field VARCHAR(100),  
-    old_value VARCHAR(255),  
-    new_value VARCHAR(255), 
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
-    employee_id INT,  
-    FOREIGN KEY (po_item_id) REFERENCES order_item(order_item_id), 
-    FOREIGN KEY (employee_id) REFERENCES employee(employee_id)  
+    change_id INT PRIMARY KEY AUTO_INCREMENT,
+    po_id INT,
+    po_item_number INT,
+    changed_field VARCHAR(100),
+    old_value VARCHAR(255),
+    new_value VARCHAR(255),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    employee_id INT,
+    FOREIGN KEY (po_id, po_item_number) REFERENCES order_item(po_id, item_number),
+    FOREIGN KEY (employee_id) REFERENCES employee(employee_id)
 );
 
+-- Change Document Header
 CREATE TABLE cdhdr (
-    change_id INT PRIMARY KEY AUTO_INCREMENT,  
-    po_id INT,  
-    changed_field VARCHAR(100),  
+    change_id INT PRIMARY KEY AUTO_INCREMENT,
+    po_id INT,
+    changed_field VARCHAR(100),
     old_value VARCHAR(255),
-    new_value VARCHAR(255), 
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-    employee_id INT,  
+    new_value VARCHAR(255),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    employee_id INT,
     FOREIGN KEY (po_id) REFERENCES purchase_order(po_id),
-    FOREIGN KEY (employee_id) REFERENCES employee(employee_id)  
+    FOREIGN KEY (employee_id) REFERENCES employee(employee_id)
 );

@@ -158,25 +158,32 @@ def write_sql_file():
                                       quantity_received, receipt_date, status, quality,
                                       batch_number, comment, created_at))
 
-    # Generate invoices with composite key reference
     for i in range(1, NUM_INVOICES + 1):
         po_id = random.randint(1, NUM_PURCHASE_ORDERS)
-        valid_items = [(po, item) for po, item, _, _, _ in order_items_data if po == po_id]
-        if valid_items:
-            po_id, item_number = random.choice(valid_items)
-            invoice_number = f"INV-{random.randint(1000000,9999999)}"
-            invoice_date = generate_random_date()
-            due_date = generate_random_date(start_year=2023)
-            quantity = random.randint(1, 50)
-            price_per_unit = random_price(10, 800)
-            tax_rate = 19.0
-            currency = random.choice(CURRENCIES)
-            status = random.choice(INVOICE_STATUS)
-            payment_terms = "Net 30"
-            created_at = invoice_date
-            invoice_data.append((i, po_id, item_number, invoice_number, invoice_date, due_date,
-                               quantity, price_per_unit, tax_rate, currency, status,
-                               payment_terms, created_at))
+        
+        # Find the PO data to get the currency
+        po_data = next((po for po in purchase_orders_data if po[0] == po_id), None)
+        
+        if po_data:
+            # Get currency from PO data (index 4 contains currency)
+            po_currency = po_data[4]
+            
+            # Find all items for this PO to calculate total amount
+            po_items = [(po, item, qty, price) for po, item, _, qty, price in order_items_data if po == po_id]
+            if po_items:
+                total_amount = sum(qty * price for _, _, qty, price in po_items)
+                
+                invoice_number = f"INV-{random.randint(1000000,9999999)}"
+                invoice_date = generate_random_date()
+                due_date = generate_random_date(start_year=2023)
+                tax_rate = 19.0
+                status = random.choice(INVOICE_STATUS)
+                payment_terms = "Net 30"
+                created_at = invoice_date
+                
+                invoice_data.append((i, po_id, invoice_number, invoice_date, due_date,
+                                   total_amount, tax_rate, po_currency, status,
+                                   payment_terms, created_at))
 
     # Generate payments
     for i in range(1, NUM_PAYMENTS + 1):
@@ -278,11 +285,10 @@ def write_sql_file():
             for g in goods_receipts_data
         ]) + ";\n\n")
 
-        # Write invoice data
-        f.write("INSERT INTO invoice (invoice_id, po_id, po_item_number, invoice_number, invoice_date, due_date, "
-                "quantity, price_per_unit, tax_rate, currency, status, payment_terms, created_at) VALUES\n")
+        f.write("INSERT INTO invoice (invoice_id, po_id, invoice_number, invoice_date, due_date, "
+                "total_amount, tax_rate, currency, status, payment_terms, created_at) VALUES\n")
         f.write(",\n".join([
-            f"({i[0]}, {i[1]}, {i[2]}, '{i[3]}', '{i[4]}', '{i[5]}', {i[6]}, {i[7]}, {i[8]}, '{i[9]}', '{i[10]}', '{i[11]}', '{i[12]}')" 
+            f"({i[0]}, {i[1]}, '{i[2]}', '{i[3]}', '{i[4]}', {i[5]}, {i[6]}, '{i[7]}', '{i[8]}', '{i[9]}', '{i[10]}')" 
             for i in invoice_data
         ]) + ";\n\n")
 

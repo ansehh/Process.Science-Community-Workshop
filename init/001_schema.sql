@@ -98,18 +98,16 @@ CREATE TABLE goods_receipt (
 CREATE TABLE invoice (
     invoice_id INT PRIMARY KEY AUTO_INCREMENT,
     po_id INT,
-    po_item_number INT,
     invoice_number VARCHAR(50),
     invoice_date DATE,
     due_date DATE,
-    quantity INT,
-    price_per_unit DECIMAL(10,2),
+    total_amount DECIMAL(10,2),
     tax_rate DECIMAL(5,2),
     currency VARCHAR(3),
     status ENUM('RECEIVED', 'IN_REVIEW', 'APPROVED', 'PAID', 'DISPUTED'),
     payment_terms VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (po_id, po_item_number) REFERENCES order_item(po_id, item_number)
+    FOREIGN KEY (po_id) REFERENCES purchase_order(po_id)
 );
 
 -- Zahlungen

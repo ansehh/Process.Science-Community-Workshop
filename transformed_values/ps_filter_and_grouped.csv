@@ -1,0 +1,643 @@
+filter;path_id
+Start->Lege Bestellposition an->Lehne Genehmigung ab->End;0
+Start->Lege Bestellposition an->Fordere Genehmigung an->End;1
+Start->Lege Bestellposition an->Erteile Genehmigung->End;2
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->End;3
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->End;4
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->End;5
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->End;6
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->End;7
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->End;8
+Start->Lehne Genehmigung ab->Lege Bestellposition an->End;9
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erfasse Rechnung->End;10
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->End;11
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->End;12
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->End;13
+Start->Fordere Genehmigung an->Lege Bestellposition an->End;14
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erfasse Rechnung->End;15
+Start->Erteile Genehmigung->Lege Bestellposition an->End;16
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;17
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->End;18
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->End;19
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->End;20
+Start->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;21
+Start->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;22
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->End;23
+Start->Lege Bestellposition an->Erteile Genehmigung->Erfasse Rechnung->End;24
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;25
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Lehne Genehmigung ab->End;26
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->End;27
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->End;28
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erfasse Rechnung->End;29
+Start->Fordere Genehmigung an->Erteile Genehmigung->Lege Bestellposition an->End;30
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;31
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->End;32
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;33
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;34
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;35
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->End;36
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->End;37
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->End;38
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Fordere Genehmigung an->End;39
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->End;40
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->End;41
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->End;42
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Erfasse Rechnung->End;43
+Start->Lege Bestellposition an->Ändere Bestellung->Lehne Genehmigung ab->End;44
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->End;45
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;46
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Erfasse Rechnung->End;47
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->End;48
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Erfasse Rechnung->End;49
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;50
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Erfasse Rechnung->End;51
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->End;52
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Erfasse Rechnung->End;53
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->End;54
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->End;55
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Erteile Genehmigung->End;56
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->End;57
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Erfasse Rechnung->End;58
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->End;59
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->End;60
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->End;61
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Erfasse Rechnung->End;62
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->End;63
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->End;64
+Start->Erteile Genehmigung->Lege Bestellposition an->Wareneingang erfasst->Erfasse Rechnung->End;65
+Start->Lege Bestellposition an->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;66
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Erfasse Rechnung->End;67
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->End;68
+Start->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->End;69
+Start->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;70
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Fordere Genehmigung an->End;71
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Erteile Genehmigung->Erfasse Rechnung->End;72
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Lehne Genehmigung ab->End;73
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->End;74
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellung->End;75
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Erteile Genehmigung->End;76
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Erfasse Rechnung->End;77
+Start->Erteile Genehmigung->Lege Bestellposition an->Erfasse Rechnung->End;78
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;79
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->End;80
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->End;81
+Start->Fordere Genehmigung an->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->End;82
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;83
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->End;84
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Erfasse Rechnung->End;85
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;86
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Lehne Genehmigung ab->End;87
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;88
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;89
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->End;90
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->End;91
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;92
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->End;93
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->End;94
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->End;95
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->End;96
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->End;97
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;98
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Erfasse Rechnung->End;99
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellung->End;100
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Erteile Genehmigung->End;101
+Start->Fordere Genehmigung an->Lege Bestellposition an->Wareneingang erfasst->Erfasse Rechnung->End;102
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->End;103
+Start->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;104
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;105
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->Erfasse Rechnung->End;106
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->End;107
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;108
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Erteile Genehmigung->End;109
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Fordere Genehmigung an->End;110
+Start->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->Lehne Genehmigung ab->End;111
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;112
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Erteile Genehmigung->End;113
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;114
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->End;115
+Start->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;116
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;117
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->Erfasse Rechnung->End;118
+Start->Lege Bestellposition an->Ändere Bestellung->Erteile Genehmigung->End;119
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erfasse Rechnung->End;120
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->End;121
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;122
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;123
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;124
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;125
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;126
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Erfasse Rechnung->End;127
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erfasse Rechnung->End;128
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;129
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;130
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;131
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;132
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;133
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->End;134
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->End;135
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->End;136
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;137
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->End;138
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->End;139
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Erteile Genehmigung->End;140
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;141
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->End;142
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;143
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Fordere Genehmigung an->End;144
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;145
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;146
+Start->Fordere Genehmigung an->Lehne Genehmigung ab->Lege Bestellposition an->End;147
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;148
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Fordere Genehmigung an->Lehne Genehmigung ab->End;149
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->End;150
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Erfasse Rechnung->End;151
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;152
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->Erteile Genehmigung->End;153
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Ändere Bestellung->End;154
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;155
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->End;156
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;157
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->End;158
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->End;159
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->End;160
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Erfasse Rechnung->End;161
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->End;162
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Wareneingang erfasst->Erfasse Rechnung->End;163
+Start->Lege Bestellposition an->Ändere Bestellung->Erteile Genehmigung->Fordere Genehmigung an->End;164
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;165
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Lehne Genehmigung ab->End;166
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;167
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->End;168
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;169
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Wareneingang erfasst->Erfasse Rechnung->End;170
+Start->Lehne Genehmigung ab->Erteile Genehmigung->Lege Bestellposition an->Erfasse Rechnung->Gleiche Rechnung aus->End;171
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Erteile Genehmigung->Erfasse Rechnung->End;172
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellung->End;173
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->End;174
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erfasse Rechnung->Gleiche Rechnung aus->End;175
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erteile Genehmigung->Fordere Genehmigung an->End;176
+Start->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Erfasse Rechnung->End;177
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;178
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Erfasse Rechnung->Gleiche Rechnung aus->End;179
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->Erfasse Rechnung->Gleiche Rechnung aus->End;180
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Fordere Genehmigung an->Erfasse Rechnung->End;181
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->End;182
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Lehne Genehmigung ab->Erfasse Rechnung->End;183
+Start->Lehne Genehmigung ab->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellung->Erfasse Rechnung->End;184
+Start->Lege Bestellposition an->Ändere Bestellung->Erteile Genehmigung->Erfasse Rechnung->End;185
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->Erfasse Rechnung->End;186
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->Erfasse Rechnung->End;187
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;188
+Start->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erteile Genehmigung->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;189
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Fordere Genehmigung an->Erfasse Rechnung->End;190
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->End;191
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;192
+Start->Fordere Genehmigung an->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->End;193
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->End;194
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;195
+Start->Fordere Genehmigung an->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->End;196
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;197
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Erfasse Rechnung->End;198
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->End;199
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;200
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->End;201
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->Fordere Genehmigung an->End;202
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellung->Erfasse Rechnung->Gleiche Rechnung aus->End;203
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Erteile Genehmigung->Erfasse Rechnung->End;204
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Ändere Bestellung->End;205
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;206
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Ändere Bestellung->End;207
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->End;208
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;209
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;210
+Start->Fordere Genehmigung an->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Erfasse Rechnung->End;211
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Erfasse Rechnung->End;212
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erfasse Rechnung->End;213
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;214
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Erteile Genehmigung->End;215
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;216
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;217
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->End;218
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Ändere Bestellung->End;219
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Erfasse Rechnung->End;220
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->End;221
+Start->Lehne Genehmigung ab->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->End;222
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->End;223
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;224
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;225
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;226
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;227
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->End;228
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->End;229
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;230
+Start->Lege Bestellposition an->Ändere Bestellung->Lehne Genehmigung ab->Erfasse Rechnung->End;231
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->End;232
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->End;233
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Erfasse Rechnung->End;234
+Start->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->Lehne Genehmigung ab->End;235
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;236
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;237
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;238
+Start->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Erfasse Rechnung->End;239
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellung->Lehne Genehmigung ab->Erfasse Rechnung->End;240
+Start->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->End;241
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->End;242
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Fordere Genehmigung an->Erfasse Rechnung->End;243
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;244
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;245
+Start->Erteile Genehmigung->Lege Bestellposition an->Wareneingang erfasst->Ändere Bestellung->Erfasse Rechnung->End;246
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;247
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->End;248
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;249
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;250
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erteile Genehmigung->Erfasse Rechnung->End;251
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;252
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;253
+Start->Lege Bestellposition an->Ändere Bestellung->Erteile Genehmigung->Lehne Genehmigung ab->End;254
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Lehne Genehmigung ab->End;255
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->End;256
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->End;257
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Erfasse Rechnung->End;258
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;259
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellung->End;260
+Start->Fordere Genehmigung an->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->End;261
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;262
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->End;263
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->End;264
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Erfasse Rechnung->End;265
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->End;266
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Erfasse Rechnung->End;267
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;268
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;269
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->End;270
+Start->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->Erfasse Rechnung->End;271
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;272
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellung->End;273
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Lehne Genehmigung ab->End;274
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;275
+Start->Lege Bestellposition an->Wareneingang erfasst->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Erfasse Rechnung->End;276
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;277
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->Erfasse Rechnung->End;278
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Fordere Genehmigung an->Erfasse Rechnung->End;279
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;280
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Fordere Genehmigung an->End;281
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;282
+Start->Fordere Genehmigung an->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;283
+Start->Fordere Genehmigung an->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;284
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;285
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->End;286
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->End;287
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Fordere Genehmigung an->End;288
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Lehne Genehmigung ab->Erfasse Rechnung->End;289
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;290
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;291
+Start->Fordere Genehmigung an->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->End;292
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erfasse Rechnung->End;293
+Start->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->End;294
+Start->Lehne Genehmigung ab->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Erfasse Rechnung->End;295
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->End;296
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;297
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->End;298
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;299
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;300
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->End;301
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Erfasse Rechnung->End;302
+Start->Erteile Genehmigung->Lege Bestellposition an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;303
+Start->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->End;304
+Start->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;305
+Start->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->End;306
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->End;307
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->Erteile Genehmigung->End;308
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Erteile Genehmigung->Erfasse Rechnung->End;309
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;310
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Erfasse Rechnung->End;311
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->End;312
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Fordere Genehmigung an->Erteile Genehmigung->End;313
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;314
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Erfasse Rechnung->End;315
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->Fordere Genehmigung an->Erfasse Rechnung->End;316
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Erteile Genehmigung->Erfasse Rechnung->End;317
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->End;318
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;319
+Start->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;320
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->End;321
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->Erfasse Rechnung->End;322
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erteile Genehmigung->End;323
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->End;324
+Start->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Erfasse Rechnung->End;325
+Start->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Erfasse Rechnung->End;326
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->Erteile Genehmigung->End;327
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;328
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->End;329
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Erteile Genehmigung->Fordere Genehmigung an->End;330
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;331
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Erteile Genehmigung->Lehne Genehmigung ab->End;332
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->End;333
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;334
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->End;335
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;336
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Erfasse Rechnung->End;337
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;338
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Fordere Genehmigung an->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->End;339
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Fordere Genehmigung an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;340
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->End;341
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->End;342
+Start->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;343
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;344
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellung->End;345
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Lehne Genehmigung ab->Erfasse Rechnung->End;346
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;347
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;348
+Start->Fordere Genehmigung an->Erteile Genehmigung->Lege Bestellposition an->Erfasse Rechnung->End;349
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Lehne Genehmigung ab->Erteile Genehmigung->End;350
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Erteile Genehmigung->End;351
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->End;352
+Start->Lege Bestellposition an->Ändere Bestellung->Wareneingang erfasst->Lehne Genehmigung ab->Erfasse Rechnung->End;353
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;354
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Erteile Genehmigung->End;355
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->End;356
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->Wareneingang erfasst->Ändere Bestellung->Erfasse Rechnung->End;357
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Fordere Genehmigung an->Erfasse Rechnung->End;358
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->End;359
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->Wareneingang erfasst->Lehne Genehmigung ab->Erfasse Rechnung->End;360
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;361
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;362
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->Ändere Bestellung->End;363
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->End;364
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->End;365
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellung->Lehne Genehmigung ab->End;366
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->Erteile Genehmigung->Erfasse Rechnung->End;367
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->End;368
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->End;369
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->End;370
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->End;371
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;372
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellung->Erteile Genehmigung->Ändere Bestellposition->End;373
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->Erteile Genehmigung->End;374
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;375
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;376
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;377
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;378
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;379
+Start->Lege Bestellposition an->Wareneingang erfasst->Erteile Genehmigung->Fordere Genehmigung an->Erfasse Rechnung->End;380
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erteile Genehmigung->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;381
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Erteile Genehmigung->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;382
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Fordere Genehmigung an->End;383
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;384
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;385
+Start->Lege Bestellposition an->Ändere Bestellung->Erteile Genehmigung->Ändere Bestellposition->End;386
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;387
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;388
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;389
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->End;390
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Erfasse Rechnung->End;391
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->Ändere Bestellung->End;392
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->End;393
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;394
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->End;395
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;396
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Lehne Genehmigung ab->Fordere Genehmigung an->End;397
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Fordere Genehmigung an->Lehne Genehmigung ab->Erfasse Rechnung->End;398
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;399
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->End;400
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->End;401
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->End;402
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;403
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;404
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;405
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->End;406
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->End;407
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Erteile Genehmigung->End;408
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;409
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;410
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;411
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Lehne Genehmigung ab->Erfasse Rechnung->End;412
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellposition->Lehne Genehmigung ab->End;413
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;414
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;415
+Start->Lege Bestellposition an->Ändere Bestellposition->Ändere Bestellung->Fordere Genehmigung an->Erfasse Rechnung->End;416
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;417
+Start->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;418
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;419
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellung->Lehne Genehmigung ab->End;420
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->Lehne Genehmigung ab->End;421
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->End;422
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Erfasse Rechnung->End;423
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;424
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Lehne Genehmigung ab->Fordere Genehmigung an->Erfasse Rechnung->End;425
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Ändere Bestellung->End;426
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellung->End;427
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;428
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Fordere Genehmigung an->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;429
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->End;430
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;431
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;432
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->Lehne Genehmigung ab->Fordere Genehmigung an->End;433
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->End;434
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;435
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;436
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;437
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->End;438
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Ändere Bestellung->Erfasse Rechnung->End;439
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->End;440
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;441
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->End;442
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->Fordere Genehmigung an->End;443
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;444
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->End;445
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;446
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->End;447
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;448
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;449
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->End;450
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Erfasse Rechnung->End;451
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;452
+Start->Lehne Genehmigung ab->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->End;453
+Start->Lehne Genehmigung ab->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->End;454
+Start->Lehne Genehmigung ab->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Erfasse Rechnung->End;455
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Ändere Bestellung->Erteile Genehmigung->End;456
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Erteile Genehmigung->Ändere Bestellposition->End;457
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->End;458
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;459
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;460
+Start->Fordere Genehmigung an->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->End;461
+Start->Fordere Genehmigung an->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->End;462
+Start->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Erteile Genehmigung->Fordere Genehmigung an->Erfasse Rechnung->End;463
+Start->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->End;464
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;465
+Start->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->End;466
+Start->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->End;467
+Start->Fordere Genehmigung an->Lege Bestellposition an->Wareneingang erfasst->Fordere Genehmigung an->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;468
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;469
+Start->Lege Bestellposition an->Ändere Bestellposition->Wareneingang erfasst->Fordere Genehmigung an->Lehne Genehmigung ab->Erteile Genehmigung->Erfasse Rechnung->End;470
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->End;471
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;472
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->End;473
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->End;474
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;475
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Fordere Genehmigung an->End;476
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Ändere Bestellung->End;477
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->Lehne Genehmigung ab->End;478
+Start->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->Erteile Genehmigung->Fordere Genehmigung an->End;479
+Start->Lege Bestellposition an->Ändere Bestellung->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->End;480
+Start->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;481
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Lehne Genehmigung ab->Ändere Bestellposition->End;482
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Lehne Genehmigung ab->End;483
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;484
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;485
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->Erfasse Rechnung->End;486
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Lehne Genehmigung ab->Erfasse Rechnung->End;487
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;488
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->End;489
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;490
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;491
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->Erfasse Rechnung->End;492
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->Erfasse Rechnung->End;493
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->End;494
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Lehne Genehmigung ab->Erfasse Rechnung->End;495
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;496
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Erteile Genehmigung->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;497
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;498
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Lehne Genehmigung ab->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;499
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->Erfasse Rechnung->End;500
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;501
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;502
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->End;503
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Lehne Genehmigung ab->Erteile Genehmigung->Erfasse Rechnung->End;504
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->End;505
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->End;506
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;507
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->End;508
+Start->Lege Bestellposition an->Ändere Bestellung->Lehne Genehmigung ab->Ändere Bestellposition->End;509
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Erteile Genehmigung->Fordere Genehmigung an->End;510
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Erteile Genehmigung->Fordere Genehmigung an->End;511
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;512
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellung->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;513
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;514
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Erteile Genehmigung->Erfasse Rechnung->End;515
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->End;516
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;517
+Start->Erteile Genehmigung->Lege Bestellposition an->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;518
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->End;519
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;520
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellung->End;521
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellung->Erfasse Rechnung->End;522
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Erfasse Rechnung->End;523
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Lehne Genehmigung ab->Fordere Genehmigung an->Erfasse Rechnung->End;524
+Start->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->End;525
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;526
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Erteile Genehmigung->End;527
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;528
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->End;529
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->Lehne Genehmigung ab->Erfasse Rechnung->End;530
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;531
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->Erfasse Rechnung->End;532
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->Ändere Bestellung->Erfasse Rechnung->End;533
+Start->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->End;534
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->End;535
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->End;536
+Start->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Lehne Genehmigung ab->Erfasse Rechnung->End;537
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;538
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;539
+Start->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->Lehne Genehmigung ab->Erfasse Rechnung->End;540
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;541
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;542
+Start->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Erteile Genehmigung->Erfasse Rechnung->End;543
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;544
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->End;545
+Start->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->Erfasse Rechnung->End;546
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;547
+Start->Erteile Genehmigung->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;548
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;549
+Start->Fordere Genehmigung an->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->End;550
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erteile Genehmigung->Ändere Bestellposition->Fordere Genehmigung an->End;551
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;552
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellposition->Erfasse Rechnung->End;553
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Erteile Genehmigung->End;554
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->End;555
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->End;556
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;557
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->End;558
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;559
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;560
+Start->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;561
+Start->Lege Bestellposition an->Wareneingang erfasst->Lehne Genehmigung ab->Fordere Genehmigung an->Erteile Genehmigung->Erfasse Rechnung->End;562
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->End;563
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Ändere Bestellung->Fordere Genehmigung an->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;564
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->End;565
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellung->End;566
+Start->Erteile Genehmigung->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Ändere Bestellung->End;567
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->End;568
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erteile Genehmigung->Ändere Bestellposition->Erfasse Rechnung->End;569
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Erteile Genehmigung->End;570
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;571
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;572
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Lehne Genehmigung ab->Fordere Genehmigung an->Erfasse Rechnung->End;573
+Start->Lege Bestellposition an->Ändere Bestellposition->Lehne Genehmigung ab->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->End;574
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Fordere Genehmigung an->Erfasse Rechnung->End;575
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Ändere Bestellung->Erfasse Rechnung->Gleiche Rechnung aus->End;576
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Ändere Bestellung->Erfasse Rechnung->Gleiche Rechnung aus->End;577
+Start->Lege Bestellposition an->Ändere Bestellung->Erteile Genehmigung->Fordere Genehmigung an->Erfasse Rechnung->End;578
+Start->Lege Bestellposition an->Ändere Bestellung->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->Erfasse Rechnung->End;579
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Lehne Genehmigung ab->Fordere Genehmigung an->End;580
+Start->Lege Bestellposition an->Erteile Genehmigung->Wareneingang erfasst->Ändere Bestellung->Fordere Genehmigung an->Erteile Genehmigung->Erfasse Rechnung->End;581
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Erteile Genehmigung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;582
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->Erteile Genehmigung->Wareneingang erfasst->Erfasse Rechnung->End;583
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;584
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;585
+Start->Erteile Genehmigung->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Erfasse Rechnung->End;586
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->Ändere Bestellposition->End;587
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Erteile Genehmigung->End;588
+Start->Lege Bestellposition an->Fordere Genehmigung an->Erteile Genehmigung->Ändere Bestellposition->Lehne Genehmigung ab->End;589
+Start->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->Erteile Genehmigung->End;590
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;591
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellposition->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;592
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Erteile Genehmigung->Erfasse Rechnung->End;593
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;594
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->End;595
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;596
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Lehne Genehmigung ab->Erfasse Rechnung->Gleiche Rechnung aus->End;597
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Fordere Genehmigung an->Ändere Bestellposition->End;598
+Start->Lege Bestellposition an->Ändere Bestellung->Fordere Genehmigung an->Ändere Bestellposition->End;599
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Ändere Bestellung->End;600
+Start->Fordere Genehmigung an->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->End;601
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Ändere Bestellung->Ändere Bestellposition->End;602
+Start->Fordere Genehmigung an->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;603
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;604
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->End;605
+Start->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Erfasse Rechnung->End;606
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;607
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Fordere Genehmigung an->Erteile Genehmigung->Erfasse Rechnung->End;608
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Fordere Genehmigung an->Erteile Genehmigung->End;609
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Erteile Genehmigung->End;610
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;611
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;612
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellposition->Fordere Genehmigung an->End;613
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellposition->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;614
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Erteile Genehmigung->Lehne Genehmigung ab->Erfasse Rechnung->End;615
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;616
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Ändere Bestellung->Ändere Bestellposition->Erfasse Rechnung->End;617
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;618
+Start->Erteile Genehmigung->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;619
+Start->Lege Bestellposition an->Fordere Genehmigung an->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->End;620
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->Ändere Bestellposition->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->End;621
+Start->Lege Bestellposition an->Fordere Genehmigung an->Ändere Bestellposition->Ändere Bestellung->Fordere Genehmigung an->Erfasse Rechnung->End;622
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Ändere Bestellung->Fordere Genehmigung an->Erfasse Rechnung->End;623
+Start->Lege Bestellposition an->Fordere Genehmigung an->Wareneingang erfasst->Erteile Genehmigung->Erfasse Rechnung->Gleiche Rechnung aus->End;624
+Start->Lege Bestellposition an->Erteile Genehmigung->Ändere Bestellung->Fordere Genehmigung an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;625
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;626
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Wareneingang erfasst->Erfasse Rechnung->End;627
+Start->Erteile Genehmigung->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->Erfasse Rechnung->End;628
+Start->Lege Bestellposition an->Ändere Bestellposition->Erteile Genehmigung->Ändere Bestellung->Fordere Genehmigung an->Erfasse Rechnung->End;629
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->Gleiche Rechnung aus->End;630
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;631
+Start->Lege Bestellposition an->Erteile Genehmigung->Fordere Genehmigung an->Wareneingang erfasst->Fordere Genehmigung an->Erfasse Rechnung->Gleiche Rechnung aus->End;632
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Lehne Genehmigung ab->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->Gleiche Rechnung aus->End;633
+Start->Erteile Genehmigung->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->End;634
+Start->Lege Bestellposition an->Erteile Genehmigung->Lehne Genehmigung ab->Ändere Bestellung->Fordere Genehmigung an->End;635
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;636
+Start->Lehne Genehmigung ab->Lege Bestellposition an->Ändere Bestellposition->Wareneingang erfasst->Erfasse Rechnung->End;637
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Erteile Genehmigung->Lehne Genehmigung ab->Wareneingang erfasst->Erfasse Rechnung->End;638
+Start->Lege Bestellposition an->Ändere Bestellposition->Fordere Genehmigung an->Erteile Genehmigung->Fordere Genehmigung an->End;639
+Start->Lege Bestellposition an->Lehne Genehmigung ab->Ändere Bestellung->Ändere Bestellposition->Lehne Genehmigung ab->End;640
+Start->Lehne Genehmigung ab->Fordere Genehmigung an->Lege Bestellposition an->Lehne Genehmigung ab->Wareneingang erfasst->Ändere Bestellposition->Erfasse Rechnung->End;641

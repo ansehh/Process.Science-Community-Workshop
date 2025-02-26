@@ -11,14 +11,14 @@ Make sure you have the following installed:
 
 ### 2️⃣ Clone the Repository
 ```sh
-git clone https://github.com/your-repo/process-mining-example.git
-cd process-mining-example
+git clone https://github.com/your-repo/Process.Science-Community-Workshop.git
+cd Process.Science-Community-Workshop
 ```
 
 ### 3️⃣ Start MySQL Container
 Run the following command to start MySQL:
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
 This will:
 - Pull and run a MySQL 8.0 container.

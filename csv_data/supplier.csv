@@ -1,0 +1,101 @@
+supplier_id;name;contact_person;email;created_at
+1;Tools GmbH Limited;Julia Wagner;julia.wagner@enterprise.com;2022-02-04 15:34:39
+2;Technik GmbH Limited;Anna Schulz;anna.schulz@example.com;2022-04-22 09:28:13
+3;Logistik AG OHG;Martin Becker;martin.becker@business.com;2022-09-19 11:46:32
+4;Handel UG KG;Peter Meyer;peter.meyer@business.com;2022-06-10 14:08:48
+5;Technik GmbH GmbH;Klaus Schmidt;klaus.schmidt@example.com;2022-07-11 10:17:55
+6;Parts Co. AG;Julia Schulz;julia.schulz@company.de;2022-10-10 14:50:52
+7;Parts Co. AG;Peter Wagner;peter.wagner@company.de;2022-05-20 12:58:01
+8;Industry AG OHG;Thomas Schneider;thomas.schneider@example.com;2022-09-12 11:40:29
+9;Industry AG KG;Sandra Fischer;sandra.fischer@company.de;2022-05-02 11:43:50
+10;Parts Co. AG;Michael Wagner;michael.wagner@corp.de;2022-04-28 14:24:23
+11;Parts Co. Co. KG;Andreas Schulz;andreas.schulz@business.com;2022-04-18 10:20:48
+12;Logistik AG UG;Thomas Wagner;thomas.wagner@example.com;2022-04-25 16:12:19
+13;Supply GmbH AG;Maria Schneider;maria.schneider@corp.de;2022-10-11 14:42:21
+14;Technik GmbH Limited;Peter Schmidt;peter.schmidt@company.de;2022-01-10 13:25:11
+15;Parts Co. OHG;Thomas Fischer;thomas.fischer@corp.de;2022-12-21 10:35:20
+16;Tools GmbH Limited;Sandra Weber;sandra.weber@company.de;2022-09-06 11:29:31
+17;Technik GmbH OHG;Klaus Meyer;klaus.meyer@business.com;2022-10-06 10:59:48
+18;Industry AG KG;Peter Fischer;peter.fischer@example.com;2022-02-28 16:58:20
+19;Technik GmbH OHG;Martin Meyer;martin.meyer@enterprise.com;2022-07-29 12:17:13
+20;Tools GmbH Co. KG;Sandra Mueller;sandra.mueller@example.com;2022-04-06 10:22:15
+21;Logistik AG Co. KG;Martin Schmidt;martin.schmidt@example.com;2022-09-01 14:49:28
+22;Tools GmbH GmbH;Anna Schneider;anna.schneider@company.de;2022-01-31 09:18:12
+23;Industry AG Limited;Maria Weber;maria.weber@enterprise.com;2022-01-20 14:00:46
+24;Tools GmbH Limited;Stefan Mueller;stefan.mueller@company.de;2022-02-04 11:19:50
+25;Parts Co. KG;Sandra Schmidt;sandra.schmidt@business.com;2022-05-23 11:24:40
+26;Industry AG Co. KG;Peter Weber;peter.weber@company.de;2022-10-31 14:57:40
+27;Logistik AG AG;Stefan Mueller;stefan.mueller@corp.de;2022-02-09 09:49:42
+28;Tools GmbH AG;Peter Schneider;peter.schneider@business.com;2022-12-05 14:03:40
+29;Technik GmbH UG;Andreas Meyer;andreas.meyer@business.com;2022-03-07 10:23:21
+30;Tools GmbH OHG;Julia Fischer;julia.fischer@business.com;2022-12-13 12:36:01
+31;Parts Co. KG;Thomas Meyer;thomas.meyer@enterprise.com;2022-01-17 10:50:18
+32;Parts Co. Co. KG;Anna Schmidt;anna.schmidt@company.de;2022-01-05 13:09:28
+33;Parts Co. KG;Thomas Fischer;thomas.fischer@company.de;2022-07-27 13:08:44
+34;Handel UG OHG;Martin Becker;martin.becker@company.de;2022-05-30 15:04:10
+35;Supply GmbH AG;Thomas Mueller;thomas.mueller@business.com;2022-09-06 09:46:42
+36;Logistik AG Co. KG;Anna Becker;anna.becker@company.de;2022-12-02 09:43:51
+37;Parts Co. Co. KG;Klaus Weber;klaus.weber@company.de;2022-09-23 15:31:38
+38;Industry AG KG;Andreas Schneider;andreas.schneider@company.de;2022-03-18 13:11:46
+39;Supply GmbH GmbH;Anna Schneider;anna.schneider@enterprise.com;2022-01-07 16:06:57
+40;Handel UG OHG;Anna Meyer;anna.meyer@example.com;2022-01-03 13:49:07
+41;Technik GmbH Limited;Peter Schneider;peter.schneider@example.com;2022-11-04 10:10:34
+42;Supply GmbH Co. KG;Peter Schulz;peter.schulz@business.com;2022-11-14 15:03:16
+43;Technik GmbH AG;Klaus Schulz;klaus.schulz@example.com;2022-03-31 10:11:44
+44;Technik GmbH GmbH;Stefan Wagner;stefan.wagner@enterprise.com;2022-08-31 14:15:40
+45;Parts Co. AG;Peter Hoffmann;peter.hoffmann@business.com;2022-06-01 16:26:09
+46;Logistik AG OHG;Sandra Schulz;sandra.schulz@example.com;2022-08-31 10:47:20
+47;Industry AG OHG;Thomas Mueller;thomas.mueller@business.com;2022-07-11 10:34:29
+48;Logistik AG UG;Thomas Weber;thomas.weber@company.de;2022-07-29 11:17:47
+49;Handel UG OHG;Thomas Becker;thomas.becker@business.com;2022-11-17 16:25:11
+50;Tools GmbH KG;Peter Schmidt;peter.schmidt@company.de;2022-06-13 16:46:04
+51;Technik GmbH AG;Klaus Schmidt;klaus.schmidt@corp.de;2022-01-17 14:49:52
+52;Handel UG OHG;Anna Fischer;anna.fischer@corp.de;2022-04-04 13:30:57
+53;Tools GmbH OHG;Julia Hoffmann;julia.hoffmann@corp.de;2022-05-05 09:45:38
+54;Logistik AG Limited;Anna Weber;anna.weber@corp.de;2022-03-21 13:53:44
+55;Industry AG UG;Klaus Meyer;klaus.meyer@corp.de;2022-09-27 11:35:11
+56;Industry AG KG;Andreas Schneider;andreas.schneider@corp.de;2022-11-21 13:59:14
+57;Logistik AG OHG;Martin Schulz;martin.schulz@business.com;2022-11-23 09:34:37
+58;Technik GmbH UG;Sandra Mueller;sandra.mueller@corp.de;2022-10-24 13:13:08
+59;Technik GmbH Limited;Stefan Fischer;stefan.fischer@business.com;2022-11-22 11:20:39
+60;Technik GmbH Limited;Anna Schmidt;anna.schmidt@business.com;2022-03-10 12:24:56
+61;Industry AG Limited;Anna Wagner;anna.wagner@company.de;2022-06-08 14:51:30
+62;Tools GmbH AG;Andreas Schneider;andreas.schneider@corp.de;2022-12-29 12:11:29
+63;Logistik AG Co. KG;Andreas Wagner;andreas.wagner@corp.de;2022-08-18 09:10:39
+64;Tools GmbH GmbH;Sandra Becker;sandra.becker@corp.de;2022-12-07 09:47:44
+65;Industry AG KG;Anna Weber;anna.weber@enterprise.com;2022-04-06 15:17:13
+66;Parts Co. UG;Sandra Meyer;sandra.meyer@enterprise.com;2022-11-23 11:11:13
+67;Industry AG KG;Andreas Mueller;andreas.mueller@company.de;2022-11-18 13:22:32
+68;Industry AG UG;Thomas Weber;thomas.weber@company.de;2022-02-22 13:37:34
+69;Tools GmbH OHG;Anna Mueller;anna.mueller@corp.de;2022-10-05 14:36:20
+70;Handel UG OHG;Michael Wagner;michael.wagner@corp.de;2022-03-07 16:01:18
+71;Technik GmbH Co. KG;Andreas Hoffmann;andreas.hoffmann@example.com;2022-01-10 10:18:59
+72;Tools GmbH KG;Stefan Meyer;stefan.meyer@company.de;2022-12-09 12:51:31
+73;Technik GmbH Limited;Michael Becker;michael.becker@example.com;2022-05-09 09:40:32
+74;Handel UG OHG;Peter Weber;peter.weber@business.com;2022-09-26 11:39:23
+75;Tools GmbH GmbH;Peter Schmidt;peter.schmidt@company.de;2022-02-08 15:29:29
+76;Supply GmbH AG;Stefan Schneider;stefan.schneider@example.com;2022-05-20 15:08:46
+77;Parts Co. GmbH;Julia Schulz;julia.schulz@example.com;2022-04-18 14:26:09
+78;Logistik AG GmbH;Julia Weber;julia.weber@corp.de;2022-09-12 10:53:23
+79;Technik GmbH OHG;Stefan Hoffmann;stefan.hoffmann@corp.de;2022-08-04 13:40:11
+80;Industry AG UG;Martin Fischer;martin.fischer@example.com;2022-06-15 11:11:06
+81;Technik GmbH AG;Andreas Mueller;andreas.mueller@business.com;2022-08-01 13:25:11
+82;Logistik AG Co. KG;Sandra Meyer;sandra.meyer@enterprise.com;2022-02-09 09:45:19
+83;Logistik AG Limited;Anna Wagner;anna.wagner@company.de;2022-09-12 16:32:31
+84;Industry AG UG;Peter Wagner;peter.wagner@business.com;2022-12-28 10:10:11
+85;Parts Co. Limited;Andreas Wagner;andreas.wagner@example.com;2022-04-13 14:12:15
+86;Parts Co. AG;Klaus Weber;klaus.weber@corp.de;2022-02-08 10:53:18
+87;Technik GmbH Co. KG;Maria Hoffmann;maria.hoffmann@company.de;2022-05-02 11:47:44
+88;Handel UG OHG;Andreas Schmidt;andreas.schmidt@enterprise.com;2022-05-30 15:49:22
+89;Technik GmbH Limited;Martin Fischer;martin.fischer@corp.de;2022-06-07 13:38:30
+90;Handel UG Limited;Sandra Fischer;sandra.fischer@business.com;2022-12-06 15:42:15
+91;Industry AG KG;Andreas Mueller;andreas.mueller@corp.de;2022-07-22 15:18:03
+92;Handel UG Co. KG;Thomas Becker;thomas.becker@corp.de;2022-02-10 09:11:54
+93;Logistik AG GmbH;Sandra Weber;sandra.weber@company.de;2022-01-07 15:25:58
+94;Tools GmbH OHG;Maria Schmidt;maria.schmidt@enterprise.com;2022-03-14 11:15:55
+95;Handel UG AG;Sandra Fischer;sandra.fischer@business.com;2022-10-31 15:09:41
+96;Supply GmbH UG;Andreas Meyer;andreas.meyer@company.de;2022-08-22 11:46:17
+97;Technik GmbH Co. KG;Peter Weber;peter.weber@example.com;2022-03-09 12:09:02
+98;Parts Co. GmbH;Julia Becker;julia.becker@example.com;2022-06-20 15:22:43
+99;Logistik AG UG;Maria Schmidt;maria.schmidt@enterprise.com;2022-08-17 09:44:36
+100;Technik GmbH AG;Thomas Schmidt;thomas.schmidt@business.com;2022-05-09 13:38:56
